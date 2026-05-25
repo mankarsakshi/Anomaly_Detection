@@ -1,0 +1,22 @@
+# === Python & Backend ===
+__pycache__/
+*.pyc
+*.pkl
+*.joblib
+*.csv
+
+
+# === FastAPI logs or local files ===
+*.log
+
+# === React & Node ===
+node_modules/
+build/
+.env
+.DS_Store
+
+# === Jupyter Notebook checkpoints ===
+
+
+# === Docker ===
+*.tar

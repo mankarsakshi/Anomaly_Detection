@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+
+/* Custom base styles */
+body {
+  @apply bg-[#0b0f1a] text-white font-sans;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Typography smoothing & antialiasing */
+html {
+  @apply antialiased;
+}
+
+/* Scrollbar styling (optional) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4b5563; /* gray-600 */
+  border-radius: 9999px;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #ef4444; /* red-500 */
+  border-radius: 10px;
+}
+
+@keyframes flow {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-flow {
+  animation: flow 5s  infinite;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 1000;
+  animation: draw 30s linear infinite;
+}
+
+
+/* src/App.css */
+
+/* Full page container with the background image */
+.login-page-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* The transparent frosted glass box */
+.login-card {
+  background: rgba(255, 255, 255, 0.1); /* Very light transparency */
+  backdrop-filter: blur(15px);           /* The blur effect */
+  -webkit-backdrop-filter: blur(15px);
+  padding: 50px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 380px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.login-card h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.input-field {
+  margin-bottom: 20px;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  outline: none;
+  font-size: 1rem;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff; /* Bright blue to match the background dots */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.login-button:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+.footer-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 0.9rem;
+}
+
+.footer-links a {
+  color: #87ceeb;
+  text-decoration: none;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #ccc;
+}
